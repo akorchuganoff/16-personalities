@@ -1,0 +1,422 @@
+[
+  {
+    "id": 1,
+    "text": "You regularly make new friends.",
+    "text_ru": "Вы регулярно заводите новых друзей.",
+    "axis": "EI",
+    "direction": "E"
+  },
+  {
+    "id": 2,
+    "text": "You spend a lot of your free time exploring various random topics that pique your interest.",
+    "text_ru": "Вы проводите много свободного времени, исследуя различные случайные темы, которые вызывают у вас интерес.",
+    "axis": "SN",
+    "direction": "N"
+  },
+  {
+    "id": 3,
+    "text": "Seeing other people cry can easily make you feel like you want to cry too.",
+    "text_ru": "Когда вы видите, как плачут другие, вам тоже легко хочется плакать.",
+    "axis": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 4,
+    "text": "You often make a backup plan for a backup plan.",
+    "text_ru": "Вы часто составляете запасной план для запасного плана.",
+    "axis": "JP",
+    "direction": "J"
+  },
+  {
+    "id": 5,
+    "text": "You usually stay calm, even under a lot of pressure.",
+    "text_ru": "Вы обычно сохраняете спокойствие даже под сильным давлением.",
+    "axis": "AT",
+    "direction": "A"
+  },
+  {
+    "id": 6,
+    "text": "At social events, you rarely try to introduce yourself to new people and mostly talk to the ones you already know.",
+    "text_ru": "На светских мероприятиях вы редко представляетесь новым людям и в основном общаетесь с теми, кого уже знаете.",
+    "axis": "EI",
+    "direction": "I"
+  },
+  {
+    "id": 7,
+    "text": "You prefer to completely finish one project before starting another.",
+    "text_ru": "Вы предпочитаете полностью завершить один проект, прежде чем начать другой.",
+    "axis": "JP",
+    "direction": "J"
+  },
+  {
+    "id": 8,
+    "text": "You are very sentimental.",
+    "text_ru": "Вы очень сентиментальны.",
+    "axis": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 9,
+    "text": "You like to use organizing tools like schedules and lists.",
+    "text_ru": "Вам нравится использовать инструменты организации, такие как расписания и списки.",
+    "axis": "JP",
+    "direction": "J"
+  },
+  {
+    "id": 10,
+    "text": "You often feel unsure of yourself.",
+    "text_ru": "Вы часто чувствуете неуверенность в себе.",
+    "axis": "AT",
+    "direction": "T"
+  },
+  {
+    "id": 11,
+    "text": "You feel comfortable just walking up to someone you find interesting and striking up a conversation.",
+    "text_ru": "Вы чувствуете себя комфортно, просто подходя к интересному вам человеку и начиная разговор.",
+    "axis": "EI",
+    "direction": "E"
+  },
+  {
+    "id": 12,
+    "text": "You are not too interested in discussing various interpretations and analyses of creative works.",
+    "text_ru": "Вам не очень интересно обсуждать различные интерпретации и анализы творческих работ.",
+    "axis": "SN",
+    "direction": "S"
+  },
+  {
+    "id": 13,
+    "text": "You are more inclined to follow your head than your heart.",
+    "text_ru": "Вы более склонны следовать разуму, чем сердцу.",
+    "axis": "TF",
+    "direction": "T"
+  },
+  {
+    "id": 14,
+    "text": "You usually prefer just doing what you feel like at any given moment instead of planning a particular daily routine.",
+    "text_ru": "Вы обычно предпочитаете делать то, что хочется в данный момент, вместо планирования определённого распорядка дня.",
+    "axis": "JP",
+    "direction": "P"
+  },
+  {
+    "id": 15,
+    "text": "You rarely worry about how you appear to other people.",
+    "text_ru": "Вы редко беспокоитесь о том, как выглядите в глазах других людей.",
+    "axis": "AT",
+    "direction": "A"
+  },
+  {
+    "id": 16,
+    "text": "You enjoy participating in group activities.",
+    "text_ru": "Вам нравится участвовать в групповых мероприятиях.",
+    "axis": "EI",
+    "direction": "E"
+  },
+  {
+    "id": 17,
+    "text": "You like books and movies that make you come up with your own interpretation of the ending.",
+    "text_ru": "Вам нравятся книги и фильмы, которые заставляют вас придумывать собственную интерпретацию концовки.",
+    "axis": "SN",
+    "direction": "N"
+  },
+  {
+    "id": 18,
+    "text": "Your happiness comes more from helping others accomplish things than your own accomplishments.",
+    "text_ru": "Ваше счастье больше связано с помощью другим в достижении целей, чем с вашими собственными достижениями.",
+    "axis": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 19,
+    "text": "You are interested in so many things that you find it difficult to choose what to try next.",
+    "text_ru": "Вам интересно так много вещей, что вам трудно выбрать, что попробовать дальше.",
+    "axis": "JP",
+    "direction": "P"
+  },
+  {
+    "id": 20,
+    "text": "You often worry about things that could go wrong.",
+    "text_ru": "Вы часто беспокоитесь о том, что может пойти не так.",
+    "axis": "AT",
+    "direction": "T"
+  },
+  {
+    "id": 21,
+    "text": "You avoid leadership roles in group settings.",
+    "text_ru": "Вы избегаете руководящих ролей в группе.",
+    "axis": "EI",
+    "direction": "I"
+  },
+  {
+    "id": 22,
+    "text": "You think that art is overrated.",
+    "text_ru": "Вы считаете, что искусство переоценено.",
+    "axis": "SN",
+    "direction": "S"
+  },
+  {
+    "id": 23,
+    "text": "You think that the world would be a better place if people relied more on rationality and less on their feelings.",
+    "text_ru": "Вы считаете, что мир стал бы лучше, если бы люди больше полагались на разум и меньше на чувства.",
+    "axis": "TF",
+    "direction": "T"
+  },
+  {
+    "id": 24,
+    "text": "You prefer to do your chores before allowing yourself to relax.",
+    "text_ru": "Вы предпочитаете сделать домашние дела, прежде чем позволить себе расслабиться.",
+    "axis": "JP",
+    "direction": "J"
+  },
+  {
+    "id": 25,
+    "text": "You enjoy watching other people argue.",
+    "text_ru": "Вам нравится наблюдать за спорами других людей.",
+    "axis": "AT",
+    "direction": "A"
+  },
+  {
+    "id": 26,
+    "text": "You try not to attract attention to yourself.",
+    "text_ru": "Вы стараетесь не привлекать к себе внимания.",
+    "axis": "EI",
+    "direction": "I"
+  },
+  {
+    "id": 27,
+    "text": "Your mood can change very quickly.",
+    "text_ru": "Ваше настроение может очень быстро меняться.",
+    "axis": "AT",
+    "direction": "T"
+  },
+  {
+    "id": 28,
+    "text": "You get irritated when people are not as efficient as you are.",
+    "text_ru": "Вас раздражает, когда люди не так эффективны, как вы.",
+    "axis": "TF",
+    "direction": "T"
+  },
+  {
+    "id": 29,
+    "text": "You often put off tasks until the last moment.",
+    "text_ru": "Вы часто откладываете задачи до последнего момента.",
+    "axis": "JP",
+    "direction": "P"
+  },
+  {
+    "id": 30,
+    "text": "You find the idea of an afterlife interesting.",
+    "text_ru": "Вам интересна идея загробной жизни.",
+    "axis": "SN",
+    "direction": "N"
+  },
+  {
+    "id": 31,
+    "text": "You prefer spending time with others rather than alone.",
+    "text_ru": "Вы предпочитаете проводить время с другими, а не в одиночестве.",
+    "axis": "EI",
+    "direction": "E"
+  },
+  {
+    "id": 32,
+    "text": "You are not interested in abstract or theoretical discussions.",
+    "text_ru": "Вам не интересны абстрактные или теоретические дискуссии.",
+    "axis": "SN",
+    "direction": "S"
+  },
+  {
+    "id": 33,
+    "text": "You can easily empathize with people who have very different backgrounds from yours.",
+    "text_ru": "Вы легко можете сопереживать людям с совершенно иным жизненным опытом.",
+    "axis": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 34,
+    "text": "You often delay making decisions.",
+    "text_ru": "Вы часто откладываете принятие решений.",
+    "axis": "JP",
+    "direction": "P"
+  },
+  {
+    "id": 35,
+    "text": "Once you have made a decision, you rarely second-guess it.",
+    "text_ru": "Приняв решение, вы редко сомневаетесь в нём.",
+    "axis": "AT",
+    "direction": "A"
+  },
+  {
+    "id": 36,
+    "text": "You would rather spend a quiet evening at home than go to a party.",
+    "text_ru": "Вы предпочли бы провести тихий вечер дома, а не пойти на вечеринку.",
+    "axis": "EI",
+    "direction": "I"
+  },
+  {
+    "id": 37,
+    "text": "You enjoy going to art museums.",
+    "text_ru": "Вам нравится посещать художественные музеи.",
+    "axis": "SN",
+    "direction": "N"
+  },
+  {
+    "id": 38,
+    "text": "You often find it difficult to understand other people's feelings.",
+    "text_ru": "Вам часто трудно понимать чувства других людей.",
+    "axis": "TF",
+    "direction": "T"
+  },
+  {
+    "id": 39,
+    "text": "You like to have a detailed plan for your day.",
+    "text_ru": "Вам нравится иметь подробный план на день.",
+    "axis": "JP",
+    "direction": "J"
+  },
+  {
+    "id": 40,
+    "text": "You rarely feel anxious.",
+    "text_ru": "Вы редко чувствуете тревогу.",
+    "axis": "AT",
+    "direction": "A"
+  },
+  {
+    "id": 41,
+    "text": "You avoid making phone calls.",
+    "text_ru": "Вы избегаете телефонных звонков.",
+    "axis": "EI",
+    "direction": "I"
+  },
+  {
+    "id": 42,
+    "text": "You spend a lot of time trying to understand ideas that are very different from your own.",
+    "text_ru": "Вы тратите много времени на попытки понять идеи, которые сильно отличаются от ваших.",
+    "axis": "SN",
+    "direction": "N"
+  },
+  {
+    "id": 43,
+    "text": "You are usually the one to initiate contact with friends.",
+    "text_ru": "Обычно именно вы инициируете общение с друзьями.",
+    "axis": "EI",
+    "direction": "E"
+  },
+  {
+    "id": 44,
+    "text": "When a plan is disrupted, you try to get back on track as soon as possible.",
+    "text_ru": "Когда план нарушается, вы стараетесь как можно скорее вернуться в нужное русло.",
+    "axis": "JP",
+    "direction": "J"
+  },
+  {
+    "id": 45,
+    "text": "You often regret mistakes you made long ago.",
+    "text_ru": "Вы часто сожалеете об ошибках, совершённых давно.",
+    "axis": "AT",
+    "direction": "T"
+  },
+  {
+    "id": 46,
+    "text": "You rarely think deeply about the meaning of life.",
+    "text_ru": "Вы редко глубоко задумываетесь о смысле жизни.",
+    "axis": "SN",
+    "direction": "S"
+  },
+  {
+    "id": 47,
+    "text": "You are more often ruled by your emotions than you are in control of them.",
+    "text_ru": "Ваши эмоции чаще управляют вами, чем вы ими.",
+    "axis": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 48,
+    "text": "Even when someone is clearly wrong, you try to spare their feelings.",
+    "text_ru": "Даже когда кто-то явно неправ, вы стараетесь пощадить его чувства.",
+    "axis": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 49,
+    "text": "You prefer to work in bursts of energy rather than at a steady pace.",
+    "text_ru": "Вы предпочитаете работать рывками энергии, а не в постоянном темпе.",
+    "axis": "JP",
+    "direction": "P"
+  },
+  {
+    "id": 50,
+    "text": "You worry that you will disappoint people who think highly of you.",
+    "text_ru": "Вы беспокоитесь, что разочаруете людей, которые высокого о вас мнения.",
+    "axis": "AT",
+    "direction": "T"
+  },
+  {
+    "id": 51,
+    "text": "You would prefer a job where you work alone most of the time.",
+    "text_ru": "Вы предпочли бы работу, где большую часть времени работаете в одиночку.",
+    "axis": "EI",
+    "direction": "I"
+  },
+  {
+    "id": 52,
+    "text": "You think that spending time on philosophical questions is a waste of time.",
+    "text_ru": "Вы считаете, что тратить время на философские вопросы — пустая трата времени.",
+    "axis": "SN",
+    "direction": "S"
+  },
+  {
+    "id": 53,
+    "text": "You prefer crowded, lively places to quiet, private ones.",
+    "text_ru": "Вы предпочитаете людные, оживлённые места тихим и уединённым.",
+    "axis": "EI",
+    "direction": "E"
+  },
+  {
+    "id": 54,
+    "text": "You can easily tell how other people are feeling.",
+    "text_ru": "Вы легко определяете, что чувствуют другие люди.",
+    "axis": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 55,
+    "text": "You often feel overwhelmed.",
+    "text_ru": "Вы часто чувствуете себя перегруженным.",
+    "axis": "AT",
+    "direction": "T"
+  },
+  {
+    "id": 56,
+    "text": "You prefer to follow established procedures rather than skip steps.",
+    "text_ru": "Вы предпочитаете следовать установленным процедурам, а не пропускать шаги.",
+    "axis": "JP",
+    "direction": "J"
+  },
+  {
+    "id": 57,
+    "text": "You are interested in controversial or provocative topics.",
+    "text_ru": "Вам интересны спорные или провокационные темы.",
+    "axis": "SN",
+    "direction": "N"
+  },
+  {
+    "id": 58,
+    "text": "You would give up an opportunity if you thought someone else needed it more.",
+    "text_ru": "Вы откажетесь от возможности, если посчитаете, что она нужнее кому-то другому.",
+    "axis": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 59,
+    "text": "You find it hard to meet deadlines.",
+    "text_ru": "Вам трудно соблюдать сроки.",
+    "axis": "JP",
+    "direction": "P"
+  },
+  {
+    "id": 60,
+    "text": "You are confident that things will work out the way you want them to.",
+    "text_ru": "Вы уверены, что всё сложится так, как вы хотите.",
+    "axis": "AT",
+    "direction": "A"
+  }
+]

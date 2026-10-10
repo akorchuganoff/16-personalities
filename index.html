@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тест на тип личности</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="app">
+
+    <!-- ================= ЭКРАН 1: ПРИВЕТСТВИЕ ================= -->
+    <section id="screen-welcome" class="screen active">
+
+      <header class="hero">
+        <p class="eyebrow">Тест на тип личности</p>
+        <h1>Узнайте, кто вы</h1>
+        <p class="lead">
+          60 утверждений, 5 осей, 16 типов личности. Отвечайте честно —
+          правильных и неправильных ответов нет. Прогресс сохраняется
+          автоматически, так что случайная перезагрузка не страшна.
+        </p>
+
+        <div class="welcome-actions">
+          <button id="start-btn" class="btn btn-primary">Начать</button>
+          <button id="resume-btn" class="btn btn-secondary" hidden>Продолжить</button>
+        </div>
+        <p id="resume-info" class="resume-info" hidden></p>
+      </header>
+
+      <section class="about">
+        <div class="about-block">
+          <h2 class="about-title">Как это работает</h2>
+          <p class="about-text">
+            Тест оценивает вас по пяти осям: экстраверсия и интроверсия,
+            сенсорика и интуиция, логика и чувство, суждение и восприятие,
+            уверенность и осторожность. По каждой оси определяется
+            доминирующий полюс — их комбинация даёт ваш тип.
+          </p>
+        </div>
+
+        <div class="about-block">
+          <h2 class="about-title">Какие бывают типы</h2>
+          <p class="about-text">
+            Всего существует 16 типов, объединённых в четыре группы.
+            Нажмите на любой, чтобы узнать подробнее.
+          </p>
+          <div id="type-groups" class="type-groups"></div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ================= ЭКРАН 2: ВОПРОС ================= -->
+    <section id="screen-question" class="screen">
+      <div class="card">
+        <div class="progress-wrap">
+          <div class="progress">
+            <div id="progress-bar"></div>
+          </div>
+          <div class="progress-text">
+            <span id="progress-current">1</span>
+            <span class="progress-sep">/</span>
+            <span id="progress-total">60</span>
+          </div>
+        </div>
+
+        <p id="question-text" class="question-text"></p>
+
+        <div id="answers" class="answers"></div>
+
+        <div class="nav">
+          <button id="back-btn" class="btn btn-ghost">← Назад</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ЭКРАН 3: РЕЗУЛЬТАТ ================= -->
+    <section id="screen-result" class="screen">
+      <div class="card">
+
+        <header class="result-header">
+        <div id="result-code" class="result-code"></div>
+        <h2 id="result-name" class="result-name"></h2>
+        <p id="result-description" class="result-description"></p>
+        <div id="result-variant" class="result-variant" hidden></div>
+        </header>
+
+        <section class="axis-section">
+          <h3 class="section-title">Ваш профиль по осям</h3>
+          <div id="axis-bars" class="axis-bars"></div>
+        </section>
+
+        <section class="tabs-section">
+          <div class="tabs" role="tablist">
+            <button type="button" data-tab="overview" class="tab active" role="tab" aria-selected="true">Обзор</button>
+            <button type="button" data-tab="relationships" class="tab" role="tab" aria-selected="false">Отношения</button>
+            <button type="button" data-tab="workplace" class="tab" role="tab" aria-selected="false">Работа</button>
+          </div>
+          <div id="tab-content" class="tab-content"></div>
+        </section>
+
+        <div class="result-footer">
+          <button id="restart-btn" class="btn btn-ghost">Пройти заново</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= МОДАЛЬНОЕ ОКНО ================= -->
+  <div id="modal-overlay" class="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Закрыть">×</button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/quiz.js"></script>
+</body>
+</html>

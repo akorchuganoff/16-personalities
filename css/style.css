@@ -1,0 +1,1040 @@
+/* =========================================================================
+   БАЗА
+   ========================================================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg:              #f5f3ef;
+  --surface:         #ffffff;
+  --surface-alt:     #faf9f7;
+  --border:          #e6e2dc;
+  --border-strong:   #d5cfc6;
+
+  --text:            #1f1d1a;
+  --text-muted:      #6b6760;
+  --text-faint:      #9a958c;
+
+  --accent:          #5b4bdb;
+  --accent-hover:    #4a3cc0;
+  --accent-soft:     #ece9fb;
+
+  --radius:          14px;
+  --radius-sm:       10px;
+  --radius-lg:       22px;
+
+  --shadow-sm:       0 1px 2px rgba(31, 29, 26, 0.05);
+  --shadow-md:       0 4px 24px rgba(31, 29, 26, 0.07);
+  --shadow-lg:       0 24px 64px rgba(31, 29, 26, 0.22);
+
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+          "Helvetica Neue", Arial, sans-serif;
+
+  --trans: 180ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+#app {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 56px 32px 96px;
+}
+
+@media (max-width: 760px) {
+  #app {
+    padding: 28px 16px 64px;
+  }
+}
+
+/* =========================================================================
+   ЭКРАНЫ
+   ========================================================================= */
+
+.screen {
+  display: none;
+  animation: fade-in 260ms ease-out;
+}
+
+.screen.active {
+  display: block;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================================================
+   КАРТОЧКИ
+   ========================================================================= */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 44px 48px;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 760px) {
+  .card {
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+}
+
+/* Вопрос — узкая «читательская» колонка */
+#screen-question .card {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Результат — пошире */
+#screen-result .card {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+/* =========================================================================
+   ЭКРАН 1: HERO
+   ========================================================================= */
+
+.hero {
+  background: linear-gradient(135deg, #ffffff 0%, #faf8ff 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 64px 48px 56px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding: 40px 22px;
+    border-radius: 18px;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero .lead {
+  margin: 0 auto 36px;
+  font-size: 1.08rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 560px;
+}
+
+.welcome-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.resume-info {
+  display: inline-block;
+  margin: 22px 0 0;
+  padding: 12px 18px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* =========================================================================
+   ЭКРАН 1: ABOUT
+   ========================================================================= */
+
+.about {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 56px 48px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+@media (max-width: 760px) {
+  .about {
+    padding: 32px 22px;
+    border-radius: 18px;
+    gap: 36px;
+  }
+}
+
+.about-block {
+  max-width: 100%;
+}
+
+.about-title {
+  margin: 0 0 12px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.about-text {
+  margin: 0 0 24px;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+.about-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Сетка групп типов --------------------------------------------------- */
+
+.type-groups {
+  display: grid;
+  gap: 36px;
+  margin-top: 8px;
+}
+
+@media (min-width: 820px) {
+  .type-groups {
+    grid-template-columns: 1fr 1fr;
+    gap: 44px 56px;
+  }
+}
+
+.type-group-header {
+  margin-bottom: 16px;
+}
+
+.type-group-title {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.type-group-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-faint);
+  line-height: 1.5;
+}
+
+.type-group-chips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 420px) {
+  .type-group-chips { grid-template-columns: 1fr; }
+}
+
+/* Чип типа ------------------------------------------------------------ */
+
+.type-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--surface-alt);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--trans), background var(--trans),
+              transform var(--trans), box-shadow var(--trans);
+}
+
+.type-chip:hover {
+  border-color: var(--accent);
+  background: var(--surface);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(91, 75, 219, 0.10);
+}
+
+.type-chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.type-chip-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.type-chip-code {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.type-chip-name {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.type-chip-arrow {
+  flex-shrink: 0;
+  font-size: 1rem;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity var(--trans), transform var(--trans);
+}
+
+.type-chip:hover .type-chip-arrow,
+.type-chip:focus-visible .type-chip-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* =========================================================================
+   КНОПКИ
+   ========================================================================= */
+
+.btn {
+  font-family: inherit;
+  font-size: 0.98rem;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background var(--trans), color var(--trans),
+              border-color var(--trans), transform var(--trans),
+              box-shadow var(--trans);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(91, 75, 219, 0.25);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+  box-shadow: 0 4px 14px rgba(91, 75, 219, 0.32);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--accent-soft);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: var(--border-strong);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background: var(--surface-alt);
+  color: var(--text);
+}
+
+/* =========================================================================
+   ЭКРАН 2: ПРОГРЕСС
+   ========================================================================= */
+
+.progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.progress {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: width 320ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  min-width: 52px;
+  text-align: right;
+}
+
+.progress-sep {
+  color: var(--text-faint);
+  margin: 0 2px;
+}
+
+/* =========================================================================
+   ЭКРАН 2: ВОПРОС
+   ========================================================================= */
+
+.question-text {
+  margin: 0 0 28px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.answer-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.98rem;
+  text-align: left;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color var(--trans), background var(--trans),
+              transform var(--trans), box-shadow var(--trans);
+}
+
+.answer-btn:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-alt);
+}
+
+.answer-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.answer-btn.selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: 0 0 0 3px rgba(91, 75, 219, 0.10);
+}
+
+.answer-dot {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border-strong);
+  background: var(--surface);
+  transition: border-color var(--trans), background var(--trans);
+  position: relative;
+}
+
+.answer-btn.selected .answer-dot {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.answer-btn.selected .answer-dot::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.answer-label {
+  flex: 1;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 4px;
+}
+
+/* =========================================================================
+   ЭКРАН 3: РЕЗУЛЬТАТ
+   ========================================================================= */
+
+.result-header {
+  text-align: center;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+
+.result-code {
+  display: inline-block;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.result-name {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.result-description {
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 520px;
+}
+
+.section-title {
+  margin: 0 0 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* Оси ---------------------------------------------------------------- */
+
+.axis-section {
+  margin-bottom: 40px;
+}
+
+.axis-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.axis-row {
+  display: grid;
+  grid-template-columns: 1fr 120px 1fr;
+  align-items: center;
+  gap: 18px;
+}
+
+@media (max-width: 560px) {
+  .axis-row {
+    grid-template-columns: 1fr 70px 1fr;
+    gap: 10px;
+  }
+}
+
+.axis-side {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.axis-side.right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.axis-name {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.axis-side.winner .axis-name {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.axis-pct {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.axis-side.winner .axis-pct {
+  color: var(--accent);
+}
+
+.axis-bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.axis-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, #7a6ee6 100%);
+  border-radius: 3px;
+  transition: width 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Вкладки ------------------------------------------------------------ */
+
+.tabs-section {
+  margin-bottom: 12px;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 28px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background var(--trans), color var(--trans);
+}
+
+.tab:hover {
+  color: var(--text);
+}
+
+.tab.active {
+  background: var(--surface);
+  color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.tab-content {
+  animation: fade-in 220ms ease-out;
+}
+
+.type-full-desc {
+  margin: 0 0 24px;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.type-full-desc:last-child {
+  margin-bottom: 0;
+}
+
+.type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 560px) {
+  .type-grid { grid-template-columns: 1fr; gap: 22px; }
+}
+
+.type-col h4 {
+  margin: 0 0 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.type-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.type-col li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.type-col li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.7;
+}
+
+.type-col ul.inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.type-col ul.inline li {
+  padding: 6px 14px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.type-col ul.inline li::before {
+  display: none;
+}
+
+.result-footer {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+/* =========================================================================
+   МОДАЛЬНОЕ ОКНО
+   ========================================================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  background: rgba(31, 29, 26, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: overlay-in 200ms ease-out;
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+@keyframes overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@media (max-width: 560px) {
+  .modal-overlay {
+    padding: 12px;
+  }
+}
+
+.modal {
+  position: relative;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 680px;
+  max-height: min(88vh, 820px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modal-in 240ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 50%;
+  font-family: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--trans), color var(--trans),
+              border-color var(--trans), transform var(--trans);
+}
+
+.modal-close:hover {
+  background: var(--surface-alt);
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.modal-close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.modal-content {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Шапка модалки ----------------------------------------------------- */
+
+.modal-header {
+  padding: 44px 48px 28px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-code {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.modal-name {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.modal-desc {
+  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  max-width: 480px;
+}
+
+/* Тело модалки ------------------------------------------------------ */
+
+.modal-body {
+  padding: 32px 48px 40px;
+}
+
+@media (max-width: 560px) {
+  .modal-header { padding: 32px 22px 22px; }
+  .modal-body   { padding: 24px 22px 32px; }
+  .modal-code   { font-size: 2.1rem; }
+  .modal-name   { font-size: 1.25rem; }
+}
+
+.modal-section {
+  margin-bottom: 28px;
+}
+
+.modal-section:last-child {
+  margin-bottom: 0;
+}
+
+.modal-section-title {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.modal-subtitle {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.modal-text {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+@media (max-width: 560px) {
+  .modal-grid { grid-template-columns: 1fr; gap: 22px; }
+}
+
+.modal-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.modal-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.modal-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.7;
+}
+
+.modal-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modal-chip {
+  padding: 6px 14px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Подпись варианта A/T под кодом типа ------------------------------ */
+
+.result-variant {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: var(--accent-soft);
+  border-radius: var(--radius-sm);
+  max-width: 480px;
+}
+
+.variant-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.variant-hint {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* =========================================================================
+   ДОСТУПНОСТЬ
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
